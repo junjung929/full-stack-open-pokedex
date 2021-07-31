@@ -33,3 +33,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: shrouded-taiga-81794
           heroku_email: juny929@gmail.com
+          healthcheck: https://shrouded-taiga-81794.herokuapp.com/health
+          checkstring: ok
