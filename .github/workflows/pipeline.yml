@@ -35,3 +35,4 @@ jobs:
           heroku_email: juny929@gmail.com
           healthcheck: https://shrouded-taiga-81794.herokuapp.com/health
           checkstring: ok
+          rollbackonhealthcheckfailed: true
