@@ -20,4 +20,9 @@ jobs:
       - name: commit messages
         env:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
-        run: echo "$COMMIT_MESSAGES"
+          JOIN_MESSAGES: ${{ join(toJson(github.event.commits.*.message), " ") }}
+          SKIP_MESSAGES: ${{ contain(join(toJson(github.event.commits.*.message), " "), "#skip") }}
+        run: echo "$COMMIT_MESSAGES" |
+             echo "$JOIN_MESSAGES" |
+             echo "$SKIP_MESSAGES"
+        
