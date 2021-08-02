@@ -11,4 +11,4 @@ jobs:
       - name: Health check
         uses: jtalk/url-health-check-action@v1.5
         with:
-          url: https://shrouded-taiga-81794.herokuapp.com/health
+          url: https://shrouded-taiga-81794.herokuapp.com/health1
